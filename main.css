@@ -35,7 +35,7 @@ body {
 }
 .title {
     display: flex;
-    width: 75%;
+    width: 70%;
     align-content: stretch;
     align-items: center;
     flex-direction: row;
@@ -58,7 +58,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    width: 65%;
+    width: 50%;
 }
 .info_singin h2{
     background-color: var(--Blue);
@@ -79,40 +79,50 @@ body {
 }
 .info_singin .inputs {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     gap: 20px;
     border-radius: 10px;
-    box-shadow: 0px 3px 4px var(--Dark-Blue , 50%);
+    box-shadow: 0px 3px 4px var(--Dark-Blue, 50%);
+    overflow: hidden;
 }
 
-.info_singin .inputs .inp input{
+input{
     padding: 15px 0px 15px 30px;
     font-weight: 700;
     border: 1px solid var(--Grayish-Blue);
-    border-radius: 6px;
-    width: auto;
-    width:95%;
+    border-radius: 4px;
+    width: -webkit-fill-available;
 }
-.info_singin .inputs .inp img{
-    position: relative;
-    left: 415px;
-    bottom: 35px;
-    display: none;
-
-}
-.info_singin .inputs .inp label{
-    color: var(--Red);
-    font-size: 11px;
-    position: relative;
-    bottom: 5px;
-    left: 60%;
-    display: none;
-}
-
-.info_singin .inputs input:hover{
+/* .info_singin .inputs input:hover{
     border: 1px solid var(--Dark-Blue); 
+} */
+input:focus,
+button:focus{
+    outline: none;
+}
+button:hover{
+    opacity: 0.8;
+}
+/* */
+
+.error {
+    border: 2px solid var(--Red); 
+    background: url(./images/icon-error.svg) no-repeat;
+    background-position: 95% 50%;
+}
+.error-text {
+    position: absolute;
+    right: 235px;
+    font-size: 12px;
+    /* font-style: italic; */
+    /* margin-left: auto; */
+    margin-top: 47px;
+    color: var(--Red);
+}
+
+input.success  {
+    border:2px solid var(--Grayish-Blue);
 }
 .info_singin .inputs button{
     background-color: var(--Green);
@@ -123,7 +133,7 @@ body {
     padding: 15px;
     font-size: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius:4px;
     text-transform: uppercase;
     box-shadow: 0px 2px 6px var(--Dark-Blue , 50%) ;
     cursor: pointer;
@@ -138,4 +148,159 @@ body {
 .info_singin p span{
     color: var(--Red);
     font-weight: 400;
+}
+@media (max-width: 1000px) {
+    .contant {
+        background-image: url(./images/bg-intro-mobile.png);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .title{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        gap: 30px;
+        width: auto;
+
+    }
+    .info_text h1 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .info_text p{
+        width:auto;
+        font-size: 11px;
+    }
+    .info_singin h2{
+        display: grid;
+        align-content: center;
+        font-size: 17px;
+    }
+    .info_singin h2 span{
+        font-size: 11px;
+    }
+    .info_singin .inputs{
+
+    }
+    .info_singin {
+        width: auto;
+        margin-bottom:50px;
+    }
+    .error-text {
+        position: absolute;
+        right: 305px;
+        font-size: 12px;
+        /* font-style: italic; */
+        /* margin-left: auto; */
+        margin-top: 47px;
+        color: var(--Red);
+    }
+    
+}
+@media (max-width: 750px) {
+    .contant {
+        background-image: url(./images/bg-intro-mobile.png);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .title{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        gap: 30px;
+        width: auto;
+
+    }
+    .info_text h1 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .info_text p{
+        width:auto;
+        font-size: 11px;
+    }
+    .info_singin h2{
+        display: grid;
+        align-content: center;
+        font-size: 17px;
+    }
+    .info_singin h2 span{
+        font-size: 11px;
+    }
+    .info_singin .inputs{
+
+    }
+    .info_singin {
+        width: auto;
+        margin-bottom:50px;
+    }
+    .error-text {
+        position: absolute;
+        right: 220px;
+        font-size: 12px;
+        /* font-style: italic; */
+        /* margin-left: auto; */
+        margin-top: 47px;
+        color: var(--Red);
+    }
+    
+}
+@media (max-width: 450px) {
+    .contant {
+        background-image: url(./images/bg-intro-mobile.png);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+    }
+    .title{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        gap: 30px;
+        width: auto;
+
+    }
+    .info_text h1 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .info_text p{
+        width:auto;
+        font-size: 11px;
+    }
+    .info_singin h2{
+        display: grid;
+        align-content: center;
+        font-size: 17px;
+    }
+    .info_singin h2 span{
+        font-size: 11px;
+    }
+    .info_singin .inputs{
+
+    }
+    .info_singin {
+        width: auto;
+        margin-bottom:50px;
+    }
+    .error-text {
+        position: absolute;
+        right: 0;
+        font-size: 12px;
+        /* font-style: italic; */
+        /* margin-left: auto; */
+        margin-top: 47px;
+        color: var(--Red);
+    }
+    
 }

@@ -21,31 +21,36 @@
       </div>
       <div class="info_singin">
         <h2> Try it free 7 days <span> then $20/mo. thereafter</span></h2>
-        <div class="inputs">
-          <div class="inp">
-            <input type="text" name="Firstname"placeholder="First Name">
-            <img src="./images/icon-error.svg" alt="">
-            <label for="Firstname">First Name cannot be empty</label>
+        <form action="#" id="form">
+          <div class="inputs">
+            <div class="inp">
+              <input id="Firstname" type="text" name="Firstname" placeholder="First Name" >
+              <span></span>
+              <!-- <img src="./images/icon-error.svg" alt="" class="error-icon">
+              <label for="Firstname" class="error-label" class="error-label" class="error-label" >First Name cannot be empty</label> -->
+            </div>
+            <div class="inp">
+            <input id="username" type="name" name="username" placeholder="Last Name">
+            <span></span>
+            <!-- <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <label for="username" class="error-label">Last Name cannot be empty</label> -->
+            </div>
+            <div class="inp">
+            <input id="email" type="email" name="email" placeholder="Email Address">
+            <span></span>
+            <!-- <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <label for="email" class="error-label">Looks like this is not an email</label> -->
+            </div>
+            <div class="inp">
+            <input id="password" type="password" name="password" placeholder="Password">
+            <span></span>
+            <!-- <img src="./images/icon-error.svg" alt="" class="error-icon">
+            <label for="password"  class="error-label">Password cannot be empty</label> -->
+            </div>
+            <button class="attribution"><a>Claim your free trial</a></button>
+            <p>By clicking the button, you are agreeing to our <span> Terms and Services</span></p>
           </div>
-        
-          <div class="inp">
-            <input type="name" name="username" placeholder="Last Name">
-            <img src="./images/icon-error.svg" alt="">
-            <label for="username">Last Name cannot be empty</label>
-          </div>
-          <div class="inp">
-            <input type="email" name="email" placeholder="Email Address">
-            <img src="./images/icon-error.svg" alt="">
-            <label for="email">Looks like this is not an email</label>
-          </div>
-          <div class="inp">
-            <input type="password" name="password" placeholder="Password">
-            <img src="./images/icon-error.svg" alt="">
-            <label for="password">Password cannot be empty</label>
-          </div>
-          <button class="attribution"><a>Claim your free trial</a></button>
-          <p>By clicking the button, you are agreeing to our <span> Terms and Services</span></p>
-        </div>
+        </form>
       </div>
     </div>
   </div>
